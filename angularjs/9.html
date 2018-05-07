@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="test">
+<html ag-app="">
 <head>
 	<meta charset="utf-8">
 	<title></title>
 	<script type="text/javascript" src="angular.js"></script>
 	<script type="text/javascript">
 		/*
-		名词：
-		"属性": 指令		ng-
-		"参数": 依赖		$	
+		Angular特性：
+		1.双向数据绑定 ng-model 
+			数据 <--> UI
+			$scope <--> html
+			*意义: 
+
+		2.依赖注入(依赖反转)
+			
+
 		*/
-		var mod = angular.module('test', []);
-		mod.controller('main', function($scope){
-			//
-			$scope.int = function(str){
-				return parseInt(str);
-			}
-		})
+		
 	</script>
 </head>
-<body ng-controller='main'>
-	<input type="text" name="" ng-model='a'>
-	<input type="text" name="" ng-model='b'>
-	{{int(a)+int(b)}}
+<body>
 
 </body>
 </html>

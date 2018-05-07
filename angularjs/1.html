@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="angular.js"></script>
+</head>
+<body>
+	<div ng-app="" ng-init="arr=[{name:'Jia',content:'HAHHAAH'},{name: 'Zhou', content:'emmmmm'}]">
+		您的名字<input type="text" name="" ng-model="name"><br>
+		您想说<input type="text" name="" ng-model="content"><br>
+		<input type="button" name="" value="提交" ng-click="arr.unshift({name:name,content:content})"><hr>
+		<ul>
+			<li ng-repeat="item in arr">
+				<h4>{{ item.name }}</h4>
+				<p>{{ item.content }}</p>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

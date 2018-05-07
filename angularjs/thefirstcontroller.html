@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='test'>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript">
+		var mod = angular.module('test', []);
+		mod.controller('main', function($scope){
+			//scope: 作用域
+			//$scope.a = 12;
+			$scope.parseInt = function(str){
+				return parseInt(str);
+			}
+		})
+	</script>
+</head>
+<body ng-controller='main'>
+	<input type="text" name="" ng-model='a'>
+	<input type="text" name="" ng-model='b'>
+	 {{ parseInt(a) + parseInt(b) }} <!--  js和ng不互通 -->
+</body>
+</html>
