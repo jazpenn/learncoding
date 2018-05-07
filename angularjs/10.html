@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="test_ajax">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script>
+		/*
+		数据交互
+
+		*/
+		var mod = angular.module('test_ajax', []);
+		mod.controller('main', function($scope){
+			$scope.arr = [12,5,8];
+		})
+	</script>
+</head>
+<body ng-controller="main">
+	<ul>
+		<li ng-repeat="a in arr">{{a}}</li>
+	</ul>
+
+</body>
+</html>
