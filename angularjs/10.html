@@ -10,8 +10,17 @@
 
 		*/
 		var mod = angular.module('test_ajax', []);
-		mod.controller('main', function($scope){
-			$scope.arr = [12,5,8];
+		mod.controller('main', function($scope,$http){
+			// setTimeout(function(){
+			// 	$scope.arr = [12,5,8];
+			// 	$scope.$apply();	//异步叫回来检查
+			// }, 10)
+			$http.get("arr.txt").then((res)=>{
+				$scope.arr = res.data;
+			},(err)=>{
+				alert('ERROR');
+			});
+
 		})
 	</script>
 </head>
